@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:layout_marginBottom="11dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="4dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/shape_categories_title" />
+
+    <TextView
+        android:id="@+id/categories_page_title"
+        android:layout_width="36dp"
+        android:layout_height="19dp"
+        android:gravity="center"
+        android:text="推荐"
+        android:textColor="@color/color_taobao"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="6dp"
+        android:background="@drawable/shape_categories_title" />
+</LinearLayout>
