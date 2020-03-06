@@ -1,7 +1,6 @@
 package com.chenjiahua.taobaounion.ui.adapter;
 
 import android.graphics.Paint;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import com.chenjiahua.taobaounion.R;
 import com.chenjiahua.taobaounion.model.domain.HomePageContent;
 import com.chenjiahua.taobaounion.utils.LogUtils;
 import com.chenjiahua.taobaounion.utils.UrlUtils;
-import com.lcodecore.tkrefreshlayout.utils.LogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +25,7 @@ import butterknife.ButterKnife;
 public class HomePageContentAdapter extends RecyclerView.Adapter<HomePageContentAdapter.InnerHolder> {
 
     //创建这个集合来保存数据
-    List<HomePageContent.DataBean> data = new ArrayList<>();
+    private List<HomePageContent.DataBean> data = new ArrayList<>();
 
     @NonNull
     @Override
@@ -81,12 +79,12 @@ public class HomePageContentAdapter extends RecyclerView.Adapter<HomePageContent
         @BindView(R.id.goods_volume)
         TextView goodsVolume;
 
-        public InnerHolder(@NonNull View itemView) {
+        InnerHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
 
-        public void setData(HomePageContent.DataBean dataBean) {
+        void setData(HomePageContent.DataBean dataBean) {
             title.setText(dataBean.getTitle ());
             ViewGroup.LayoutParams layoutParams = cover.getLayoutParams();
             int height = layoutParams.height;
